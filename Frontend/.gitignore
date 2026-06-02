@@ -1,0 +1,8 @@
+# Mengabaikan file sampah sistem operasi
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+.DS_Store
+
+# Mengabaikan folder settingan VS Code kamu
+.vscode/
