@@ -1040,6 +1040,7 @@ dd,
 .games-grid-nexon {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 1rem;
 }
 
 .game-card-nexon {
@@ -1154,6 +1155,10 @@ dd,
   opacity: 0.6;
 }
 
+.game-card-nexon.is-hidden {
+  display: none;
+}
+
 .portal-news-section {
   padding: 2rem var(--pad) 6rem var(--pad);
   max-width: 1300px;
@@ -1227,6 +1232,7 @@ dd,
 }
 
 .footer-top-nexon {
+  width: min(1300px, 100%);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -1284,6 +1290,7 @@ dd,
   gap: 2rem;
   background: #111722;
   border-top: 1px solid rgba(255, 255, 255, 0.08);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .launcher-copy {
@@ -1305,5 +1312,17 @@ dd,
   .launcher-section {
     flex-direction: column;
     align-items: flex-start;
+  }
+}
+
+@media (max-width: 820px) {
+  .header-right-actions {
+    justify-content: flex-end;
+  }
+
+  .section-header-nexon {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 1rem;
   }
 }

@@ -7,21 +7,20 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body class="contact-body">
-    <header class="site-header">
+    <header class="site-header global-navbar">
       <a class="brand" href="index.html" aria-label="Kamio Games home">
-        <img
-          src="../Asset/Kamio-games-logo.jpeg"
-          alt="Kamio Games"
-          style="height: 2.5rem; width: auto; border-radius: 0.4rem"
-        />
-        <span>Kamio Games</span>
+        <span class="brand-text">KAMIO GAMES</span>
       </a>
       <nav class="main-nav" aria-label="Main navigation">
-        <a href="index.html">Game</a>
-        <a href="devlog.html">Devlog</a>
-        <a href="contact.html">Support</a>
+        <a href="index.html#games-section" class="nav-link">GAMES</a>
+        <a href="contact.html" class="nav-link">SUPPORT</a>
+        <a href="devlog.html" class="nav-link">NEWSROOM</a>
+        <a href="about.html" class="nav-link">ABOUT STUDIO</a>
       </nav>
-      <a class="header-cta" href="index.html">Back Home</a>
+      <div class="header-right-actions">
+        <a class="header-login" href="#">LOGIN</a>
+        <a class="header-cta portal-cta" href="index.html#games-section">PLAY NOW</a>
+      </div>
     </header>
     <main class="contact-page">
       <section class="contact-shell" aria-labelledby="contact-title">
@@ -57,7 +56,7 @@
             >
               <img
                 src="../Asset/x.png"
-                alt="Instagram"
+                alt="X"
                 style="
                   height: 2.5rem;
                   width: auto;
@@ -100,15 +99,27 @@
       </section>
     </main>
 
-    <footer class="site-footer section-label" data-point="7">
-      <nav aria-label="Footer navigation">
-        <a href="about.html">About Studio</a>
-        <a href="devlog.html">Devlog</a>
-        <a href="contact.html">Contact / Support</a>
-        <a href="download.html">Download Game</a>
-        <a href="privacy.html">Privacy Policy</a>
-      </nav>
-      <p>Copyright 2026 Kamio Games. All rights reserved.</p>
+    <footer class="site-footer portal-footer section-label" data-point="7">
+      <div class="footer-top-nexon">
+        <div class="footer-brand-nexon">
+          <img
+            class="footer-logo"
+            src="../Asset/Kamio-games-logo.jpeg"
+            alt="Kamio Games"
+          />
+          <span>KAMIO GAMES</span>
+        </div>
+        <nav class="footer-links-nexon" aria-label="Footer navigation">
+          <a href="about.html">About Studio</a>
+          <a href="devlog.html">Newsroom</a>
+          <a href="contact.html">Contact / Support</a>
+          <a href="press-kit.html">Press Kit</a>
+          <a href="privacy.html">Privacy Policy</a>
+        </nav>
+      </div>
+      <div class="footer-bottom-nexon">
+        <p>&copy; 2026 Kamio Games Corporation. All rights reserved.</p>
+      </div>
     </footer>
     <script src="lightbox.js"></script>
   </body>

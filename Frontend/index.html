@@ -18,13 +18,13 @@
       </a>
       <nav class="main-nav" aria-label="Main navigation">
         <a href="#games-section" class="nav-link">GAMES</a>
-        <a href="devlog.html" class="">BERITA & UPDATE</a>
-        <a href="about.html" class="nav-link">TENTANG STUDIO</a>
         <a href="contact.html" class="nav-link">SUPPORT</a>
+        <a href="devlog.html" class="nav-link">NEWSROOM</a>
+        <a href="about.html" class="nav-link">ABOUT STUDIO</a>
       </nav>
       <div class="header-right-actions">
         <a class="header-login" href="#">LOGIN</a>
-        <a class="header-cta portal-cta" href="#games-section">MAIN SEKARANG</a>
+        <a class="header-cta portal-cta" href="#games-section">PLAY NOW</a>
       </div>
     </header>
 
@@ -43,7 +43,7 @@
               >Create Account</a
             >
             <a class="btn-secondary-nexon" href="devlog.html"
-              >LIHAT DETAIL UPDATE</a
+              >VIEW UPDATE DETAILS</a
             >
           </div>
         </div>
@@ -51,20 +51,20 @@
 
       <section id="games-section" class="portal-games-grid-container">
         <div class="section-header-nexon">
-          <h2>SEMUA GAME</h2>
+          <h2>ALL GAMES</h2>
           <div class="game-filters">
-            <button class="filter-btn active">SEMUA</button>
-            <button class="filter-btn">PC</button>
-            <button class="filter-btn">Mobile</button>
+            <button class="filter-btn active" type="button" data-filter="all">ALL</button>
+            <button class="filter-btn" type="button" data-filter="pc">PC</button>
+            <button class="filter-btn" type="button" data-filter="mobile">MOBILE</button>
           </div>
         </div>
 
         <div class="games-grid-nexon">
-          <div class="game-card-nexon">
+          <div class="game-card-nexon" data-platforms="pc mobile">
             <div class="card-img-wrapper">
               <img src="../Asset/main-menu.jpeg" alt="Memories We Never Had" />
               <div class="card-hover-overlay">
-                <a href="mwh.html" class="card-btn">Situs Resmi</a>
+                <a href="mwh.html" class="card-btn">Official Site</a>
               </div>
             </div>
             <div class="game-card-info">
@@ -77,7 +77,7 @@
             </div>
           </div>
 
-          <div class="game-card-nexon item-disabled">
+          <div class="game-card-nexon item-disabled" data-platforms="pc">
             <div class="card-img-wrapper">
               <div class="placeholder-card-img">Coming Soon</div>
             </div>
@@ -86,6 +86,33 @@
               <p>Coming Soon</p>
               <div class="platform-tags">
                 <span class="tag-pc">PC</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="game-card-nexon item-disabled" data-platforms="mobile">
+            <div class="card-img-wrapper">
+              <div class="placeholder-card-img">Coming Soon</div>
+            </div>
+            <div class="game-card-info">
+              <h3>Project Kamio: Mobile</h3>
+              <p>Story Game / Mobile Experience</p>
+              <div class="platform-tags">
+                <span class="tag-mobile">ANDROID</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="game-card-nexon item-disabled" data-platforms="pc mobile">
+            <div class="card-img-wrapper">
+              <div class="placeholder-card-img">Coming Soon</div>
+            </div>
+            <div class="game-card-info">
+              <h3>Project Kamio: Archive</h3>
+              <p>Visual Novel / Experimental</p>
+              <div class="platform-tags">
+                <span class="tag-pc">PC</span>
+                <span class="tag-mobile">ANDROID</span>
               </div>
             </div>
           </div>
@@ -129,6 +156,16 @@
               trailer resmi beserta versi demo yang dapat dicoba...
             </p>
           </article>
+
+          <article class="news-item-card">
+            <span class="news-date">Coming Soon</span>
+            <span class="news-category">NEWS</span>
+            <h3>Kamio Games Portal Update</h3>
+            <p>
+              The official Kamio Games portal is being prepared as the central
+              hub for game updates, support, and media resources.
+            </p>
+          </article>
         </div>
       </section>
     </main>
@@ -155,5 +192,6 @@
         <p>&copy; 2026 Kamio Games Corporation. All rights reserved.</p>
       </div>
     </footer>
+    <script src="portal.js"></script>
   </body>
 </html>
