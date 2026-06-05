@@ -30,7 +30,12 @@ body {
   background-size: cover;
   color: var(--text);
   font-family:
-    Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Inter,
+    ui-sans-serif,
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
     sans-serif;
 }
 
@@ -213,7 +218,13 @@ h3 {
 .screenshot-row div {
   display: grid;
   place-items: center;
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.03)), var(--bg-panel);
+  background:
+    linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.12),
+      rgba(255, 255, 255, 0.03)
+    ),
+    var(--bg-panel);
   border: 1px solid rgba(255, 255, 255, 0.12);
   border-radius: 12px;
   overflow: hidden;
@@ -462,8 +473,6 @@ dd,
   font-size: 0.86rem;
 }
 
-
-
 @media (max-width: 820px) {
   .site-header {
     grid-template-columns: 1fr auto;
@@ -498,7 +507,6 @@ dd,
   .art-frame {
     min-height: 22rem;
   }
-
 }
 
 .screenshot-row {
@@ -531,10 +539,10 @@ dd,
   transform: scale(1.04);
 }
 
-  .section-label::before,
-  .hero.section-label::before {
-    top: 1rem;
-  }
+.section-label::before,
+.hero.section-label::before {
+  top: 1rem;
+}
 
 .download-page {
   background:
@@ -587,8 +595,11 @@ dd,
   border-radius: 0.45rem;
   font-weight: 900;
   text-transform: uppercase;
-  box-shadow:  0 18px 45px rgba(0, 0, 0, 0.32);
-  transition:transform 0.2s ease, box-shadow 0.2s ease, filter 0.2s ease;
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.32);
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    filter 0.2s ease;
 }
 
 .download-button:hover {
@@ -664,7 +675,9 @@ dd,
   margin: 0 auto;
   padding: 5rem 2rem;
   text-align: center;
-  background: linear-gradient(180deg, rgba(14, 17, 22, 0.74), rgba(14, 17, 22, 0.92)), url("main-menu.jpeg");
+  background:
+    linear-gradient(180deg, rgba(14, 17, 22, 0.74), rgba(14, 17, 22, 0.92)),
+    url("main-menu.jpeg");
   background-position: center;
   background-size: cover;
   border: 1px solid rgba(255, 255, 255, 0.12);
@@ -752,7 +765,11 @@ dd,
   border: 1px solid rgba(255, 255, 255, 0.12);
   border-radius: 0.5rem;
   background:
-    linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.03)),
+    linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.1),
+      rgba(255, 255, 255, 0.03)
+    ),
     rgba(15, 20, 29, 0.66);
   box-shadow: var(--shadow);
   backdrop-filter: blur(18px);
@@ -762,7 +779,10 @@ dd,
 .social-grid a {
   border: 1px solid rgba(255, 255, 255, 0.1);
   background: rgba(13, 18, 27, 0.76);
-  transition: transform 0.2s ease, border-color 0.2s ease, background 0.2s ease;
+  transition:
+    transform 0.2s ease,
+    border-color 0.2s ease,
+    background 0.2s ease;
 }
 
 .support-card:hover,
@@ -839,4 +859,416 @@ dd,
   .social-grid {
     grid-template-columns: 1fr;
   }
+}
+
+.home-page {
+  background: #090c10;
+  font-family: "Inter", sans-serif;
+}
+
+.global-navbar {
+  background: rgba(14, 17, 22, 0.95) !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(10px);
+}
+
+.brand-text {
+  font-weight: 9000 !important;
+  letter-spacing: 0.15em;
+  color: #fff;
+}
+
+.header-right-actions {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.header-login {
+  color: var(--muted);
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  transition: color 0.2s;
+}
+
+.header-login:hover {
+  color: #fff;
+}
+
+.portal-cta {
+  background: var(--accent) !important;
+  color: #0e1116;
+  font-weight: 800 !important;
+  border-radius: 4px !important;
+  padding: 0.5rem 1.2rem !important;
+}
+
+.portal-hero {
+  position: relative;
+  height: 80vh;
+  min-height: 500px;
+  display: flex;
+  align-items: center;
+  padding: 0 var(--pad);
+  background:
+    linear-gradient(
+      90deg,
+      rgba(9, 12, 16, 0.95) 30%,
+      rgba(9, 12, 16, 0.4) 100%
+    ),
+    url("../Asset/main-menu.jpeg") no-repeat center top;
+  background-size: cover;
+  overflow: hidden;
+}
+
+.portal-hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 600px;
+}
+
+.hero-tagline {
+  color: var(--accent);
+  font-weight: 800;
+  letter-spacing: 0.2em;
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+}
+
+.hero-game-title {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  line-height: 1.1;
+  font-weight: 900;
+  margin: 0 0 1.5rem 0;
+  color: #fff;
+  text-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
+}
+
+.hero-game-desc {
+  color: var(--muted);
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+.hero-portal-actions {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.btn-primary-nexon {
+  background: #fff;
+  color: #000;
+  padding: 0.9rem 2rem;
+  font-weight: 800;
+  font-size: 0.95rem;
+  border-radius: 4px;
+  letter-spacing: 0.05em;
+  transition:
+    transform 0.2s,
+    background-color 0.2s;
+}
+
+.btn-primary-nexon:hover {
+  background: var(--accent);
+  transform: translateY(-2px);
+}
+
+.btn-secondary-nexon {
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  padding: 0.9rem 2rem;
+  font-weight: 700;
+  font-size: 0.9rem;
+  border-radius: 4px;
+  backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: background 0.2s;
+}
+
+.btn-secondary-nexon:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.portal-grid-games-grid-container {
+  padding: 5rem var(--pad);
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+.section-header-nexon {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.5);
+  padding-bottom: 1rem;
+  margin-bottom: 2.5rem;
+}
+
+.section-header-nexon h2 {
+  font-size: 1.75rem;
+  font-weight: 900;
+  letter-spacing: 0.05em;
+  margin: 0;
+}
+
+.game-filter {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.filter-btn {
+  background: transparent;
+  border: none;
+  color: var(--muted);
+  font-weight: 700;
+  font-size: 0.85rem;
+  cursor: pointer;
+  letter-spacing: 0.05rem;
+  transition: color 0.2s;
+}
+
+.filter-btn.active,
+.filter-btn:hover {
+  color: #fff;
+  border-bottom: 2px solid #fff;
+}
+
+.games-grid-nexon {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+}
+
+.game-card-nexon {
+  background: #13171f;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.03);
+  transition:
+    transform 0.3s,
+    box-shadow 0.3s;
+}
+
+.game-card-nexon:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+  border-color: rgba(53, 212, 189, 0.3);
+}
+
+.card-img-wrapper {
+  position: relative;
+  height: 200px;
+  background: #1a202c;
+  overflow: hidden;
+}
+
+.card-img-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s;
+}
+
+.game-card-nexon:hover .card-img-wrapper img {
+  transform: scale(1.05);
+}
+
+.card-hover-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(9, 12, 16, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.25s;
+}
+
+.card-img-wrapper:hover .card-hover-overlay {
+  opacity: 1;
+}
+
+.card-btn {
+  background: var(--accent);
+  color: #000;
+  padding: 0.6rem 1.5rem;
+  font-weight: 800;
+  font-size: 0.85rem;
+  border-radius: 4px;
+}
+
+.placeholder-card-img {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(255, 255, 255, 0.2);
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  font-size: 0.9rem;
+}
+
+.game-card-info {
+  padding: 1.5rem;
+}
+
+.game-card-info h3 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.2rem;
+  color: #fff;
+}
+
+.game-card-info p {
+  margin: 0 0 1rem 0;
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
+.platform-tags {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.platform-tags span {
+  font-size: 0.65rem;
+  font-weight: 800;
+  padding: 0.2rem 0.5rem;
+  border-radius: 3px;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.tag-pc {
+  color: #56ccf2;
+}
+.tag-mobile {
+  color: #6fcf97;
+}
+.item-disabled {
+  opacity: 0.6;
+}
+
+.portal-news-section {
+  padding: 2rem var(--pad) 6rem var(--pad);
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+.view-all-news {
+  color: var(--accent);
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.news-list-nexon {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+  gap: 1.5rem;
+}
+
+@media (max-width: 600px) {
+  .news-list-nexon {
+    grid-template-columns: 1fr;
+  }
+}
+
+.news-item-card {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  padding: 2rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition:
+    background 0.2s,
+    border-color 0.2s;
+}
+
+.news-item-card:hover {
+  background: rgba(255, 255, 255, 0.04);
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+.news-date {
+  color: var(--muted);
+  font-size: 0.8rem;
+  margin-right: 1rem;
+}
+
+.news-category {
+  color: var(--accent-2);
+  font-weight: 800;
+  font-size: 0.75rem;
+  letter-spacing: 0.05em;
+}
+
+.news-item-card h3 {
+  margin: 0.75rem 0;
+  color: #fff;
+  font-size: 1.2rem;
+}
+
+.news-item-card p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.portal-footer {
+  background: #05070a !important;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  padding: 4rem var(--pad) !important;
+}
+
+.footer-top-nexon {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-bottom: 2rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  padding-bottom: 2rem;
+}
+
+.footer-brand-nexon {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-weight: 900;
+  letter-spacing: 0.1em;
+  color: #fff;
+}
+
+.footer-logo {
+  height: 2rem;
+  border-radius: 4px;
+}
+
+.footer-links-nexon {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.footer-links-nexon a {
+  font-size: 0.85rem;
+  color: var(--muted);
+  font-weight: 600;
+}
+
+.footer-links-nexon a:hover {
+  color: #fff;
+}
+
+.footer-bottom-nexon p {
+  color: rgba(255, 255, 255, 0.3);
+  font-size: 0.8rem !important;
+  line-height: 1.6;
+  margin: 0;
 }
