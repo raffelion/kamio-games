@@ -1575,3 +1575,14 @@ p, .hero-text, .preview-copy p, .about p, .post-list p, .final-cta p, .page-hero
     border-radius: 4px; font-weight: bold;
 }
 
+.nav-logo {
+    height: 35px;
+    width: auto;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+}
