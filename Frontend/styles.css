@@ -10,6 +10,7 @@
   --accent-2: #f2c94c;
   --danger: #ff647c;
   --shadow: 0 24px 70px rgba(0, 0, 0, 0.36);
+  --pad: clamp(1rem, 4vw, 4rem);
 }
 
 * {
@@ -873,7 +874,7 @@ dd,
 }
 
 .brand-text {
-  font-weight: 9000 !important;
+  font-weight: 900 !important;
   letter-spacing: 0.15em;
   color: #fff;
 }
@@ -992,7 +993,7 @@ dd,
   background: rgba(255, 255, 255, 0.1);
 }
 
-.portal-grid-games-grid-container {
+.portal-games-grid-container {
   padding: 5rem var(--pad);
   max-width: 1300px;
   margin: 0 auto;
@@ -1014,7 +1015,7 @@ dd,
   margin: 0;
 }
 
-.game-filter {
+.game-filters {
   display: flex;
   gap: 0.5rem;
 }
@@ -1271,4 +1272,38 @@ dd,
   font-size: 0.8rem !important;
   line-height: 1.6;
   margin: 0;
+}
+
+.launcher-section {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 3rem var(--pad);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+  background: #111722;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.launcher-copy {
+  max-width: 44rem;
+}
+
+.launcher-copy h2 {
+  margin: 0 0 1rem;
+  font-size: clamp(1.8rem, 3vw, 2.8rem);
+}
+
+.launcher-copy p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+@media (max-width: 720px) {
+  .launcher-section {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 }
