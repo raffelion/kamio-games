@@ -36,29 +36,26 @@
           <div class="download-actions download-actions-center">
             <a
               class="download-button android-download"
-              href="../Asset/android.png"
-              download
+              href="javascript:void(0)" onclick="showComingSoon('Google Play Store')"
             >
               <span class="download-icon">
                 <img src="../Asset/android.png" alt="Android" />
               </span>
               <span>
-                <strong>Android Download</strong>
-                <small>APK version</small>
+                <strong>Google Play</strong>
+                <small>Coming Soon</small>
               </span>
             </a>
 
             <a
-              class="download-button windows-download"
-              href="../Asset/windows.png"
-              download
+              class="download-button windows-download" href="javascript:void(0)" onclick="showComingSoon('Steam')"
             >
               <span class="download-icon">
                 <img src="../Asset/windows.png" alt="Windows" />
               </span>
               <span>
-                <strong>Windows Download</strong>
-                <small>PC version</small>
+                <strong>Steam</strong>
+                <small>Coming Soon</small>
               </span>
             </a>
           </div>
@@ -89,5 +86,19 @@
       </div>
     </footer>
     <script src="lightbox.js"></script>
+    <script>
+    function showComingSoon(platform) {
+        const overlay = document.createElement('div');
+        overlay.className = 'popup-overlay';
+        overlay.innerHTML = `
+            <div class="popup-content">
+                <h3>Coming Soon!</h3>
+                <p>The ${platform} version is currently in development. Our team is working hard to bring you the best experience possible. Stay tuned!</p>
+                <button class="close-btn" onclick="this.parentElement.parentElement.remove()">Close</button>
+            </div>
+        `;
+         document.body.appendChild(overlay);
+      }
+      </script>
   </body>
 </html>

@@ -1234,13 +1234,40 @@ dd,
 .footer-top-nexon {
   width: min(1300px, 100%);
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
   align-items: center;
-  flex-wrap: wrap;
-  gap: 2rem;
-  margin-bottom: 2rem;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
   border-bottom: 1px solid rgba(255, 255, 255, 0.05);
   padding-bottom: 2rem;
+}
+
+.footer-links-nexon {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0;
+  order: 1;
+}
+
+.footer-links-nexon a {
+  font-size: 0.85rem;
+  color: var(--muted);
+  font-weight: 600;
+  text-transform: uppercase;
+  padding: 0 15px;
+  border-right: 1px solid rgba(255, 255, 255, 0.15);
+  line-height: 1;
+  margin-bottom: 0.5rem;
+  transition: color 0.2s;
+}
+
+.footer-links-nexon a:last-child {
+  border-right: none;
+}
+
+.footer-links-nexon a:hover {
+  color: #fff;
 }
 
 .footer-brand-nexon {
@@ -1250,6 +1277,7 @@ dd,
   font-weight: 900;
   letter-spacing: 0.1em;
   color: #fff;
+  order: 2;
 }
 
 .footer-logo {
@@ -1257,27 +1285,13 @@ dd,
   border-radius: 4px;
 }
 
-.footer-links-nexon {
-  display: flex;
-  gap: 1.5rem;
-  flex-wrap: wrap;
-}
-
-.footer-links-nexon a {
-  font-size: 0.85rem;
-  color: var(--muted);
-  font-weight: 600;
-}
-
-.footer-links-nexon a:hover {
-  color: #fff;
-}
 
 .footer-bottom-nexon p {
   color: rgba(255, 255, 255, 0.3);
   font-size: 0.8rem !important;
   line-height: 1.6;
   margin: 0;
+  text-align: center;
 }
 
 .launcher-section {
@@ -1325,4 +1339,238 @@ dd,
     flex-direction: column;
     gap: 1rem;
   }
+}
+
+@media screen and (max-width: 768px) {
+  :root {
+    --pad: 1.25rem;
+  }
+
+  .global-navbar {
+    height: 60px;
+    padding: 0 1rem !important;
+  }
+
+  .global-navbar .main-nav {
+    display: none !important;
+  }
+
+  .header-right-actions {
+    gap: 0.5rem;
+  }
+
+  .header-login {
+    font-size: 0.8rem;
+  }
+
+  .portal-cta {
+    padding: 0.4rem 0.8rem !important;
+    font-size: 0.75rem !important;
+  }
+
+  .portal-hero {
+    height: 60vh;
+    min-height: 400px;
+    padding: 2rem 1.25rem;
+    display: flex;
+    align-items: flex-end;
+  }
+
+  .portal-hero-content {
+    max-width: 100%;
+    text-align: left;
+  }
+
+  .portal-hero-content h1,
+  .hero-game-title {
+    font-size: 1.8rem !important;
+    line-height: 1.2;
+    margin-bottom: 0.75rem;
+  }
+
+  .portal-hero-content p {
+    font-size: 0.9rem !important;
+    line-height: 1.4;
+  }
+
+  #games-section {
+    padding: 2.5rem 1.25rem !important;
+  }
+
+  .games-grid-nexon {
+    grid-template-columns: 1fr !important;
+    gap: 1.5rem;
+  }
+
+  .game-card-nexon {
+    max-width: 100%;
+  }
+
+  .card-img-wrapper {
+    height: 160px;
+  }
+
+  .game-card-info h3 {
+    font-size: 1.1rem !important;
+  }
+
+  .game-card-info p {
+    font-size: 0.85rem !important;
+  }
+
+  .portal-news-section {
+    padding: 2rem 1.25rem 4rem 1.25rem !important;
+  }
+
+  .news-list-nexon {
+    grid-template-columns: 1fr !important;
+    gap: 1rem;
+  }
+
+  .news-item-card {
+    padding: 1.25rem !important;
+  }
+
+  .news-item-card h3 {
+    font-size: 1.05rem !important;
+    margin: 0.5rem 0;
+  }
+
+  .news-item-card p {
+    font-size: 0.85rem !important;
+  }
+
+  .portal-footer {
+    padding: 2.5rem 1.25rem !important;
+  }
+
+/*
+  .footer-top-nexon {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.5rem;
+  }
+
+  .footer-links-nexon {
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+*/
+
+  .footer-links-nexon a {
+    font-size: 0.8rem;
+  }
+}
+
+h1 { font-size: clamp(2.2rem, 5vw, 4rem) !important; }
+h2 { font-size: clamp(1.6rem, 3.5vw, 2.6rem) !important; }
+h3 { font-size: clamp(1.1rem, 2vw, 1.35rem) !important; }
+
+.contact-copy h1 { font-size: clamp(3rem, 6vw, 5.5rem) !important; }
+
+.hero-game-title { font-size: clamp(1.8rem, 4vw, 3rem) !important; }
+
+.support-card strong { font-size: clamp(1.2rem, 2.5vw, 1.8rem) !important; }
+
+p, .hero-text, .preview-copy p, .about p, .post-list p, .final-cta p, .page-hero p, .content-panel p, .hero-game-desc {
+    font-size: clamp(0.95rem, 1.2vw, 1.05rem) !important;
+    line-height: 1.6 !important;
+}
+
+@media screen and (max-width: 768px) {
+    body, main {
+        overflow-x: hidden !important;
+        width: 100% !important;
+    }
+
+    .portal-hero, .portal-games-grid-container, .portal-news-section, .launcher-section, .footer-top-nexon, .download-section {
+        padding-left: 1.25rem !important;
+        padding-right: 1.25rem !important;
+    }
+
+    .portal-hero {
+        height: auto !important;
+        min-height: 70vh !important;
+        padding-top: 6rem !important;
+        padding-bottom: 3rem !important;
+        align-items: center !important;
+    }
+
+    .hero-portal-actions, .download-actions {
+        flex-direction: column !important;
+        width: 100% !important;
+        gap: 0.8rem !important;
+    }
+    .hero-portal-actions a, .download-actions a {
+        width: 100% !important;
+        text-align: center !important;
+        justify-content: center !important;
+    }
+
+    .games-grid-nexon, .news-list-nexon, .feature-cards, .screenshot-row, .game-strip {
+        grid-template-columns: 1fr !important;
+        gap: 1.25rem !important;
+    }
+
+    .site-header {
+        padding: 0.5rem 1rem !important;
+        gap: 0.5rem !important;
+    }
+    .header-right-actions {
+        gap: 0.75rem !important;
+    }
+    .header-cta, .portal-cta {
+        padding: 0.4rem 0.8rem !important;
+        font-size: 0.75rem !important;
+        min-height: 0 !important;
+    }
+
+    .header-cta, .portal-cta {
+        padding: 0.4rem 0.8rem !important;
+        font-size: 0.75rem !important;
+        min-height: 0 !important;
+    }
+
+    .game-filters {
+        flex-wrap: wrap !important;
+    }
+
+    .filter-btn {
+        display: inline-block !important;
+    }
+}
+
+.title-with-logo {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 10px;
+}
+
+.mini-logo {
+  height: 40px;
+  width: auto;
+  object-fit: contain;
+}
+
+@media screen and (max-width: 768px) {
+  .mini-logo {
+    height: 30px;
+  }
+}
+
+.popup-overlay {
+    position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(0, 0, 0, 0.9); display: flex;
+    justify-content: center; align-items: center; z-index: 9999;
+}
+.popup-content {
+    background: #202733; padding: 2rem; border-radius: 12px;
+    text-align: center; max-width: 400px; border: 1px solid #35d4bd;
+    color: white;
+}
+.close-btn {
+    margin-top: 1rem; padding: 0.6rem 1.5rem; cursor: pointer;
+    background: #35d4bd; color: #0e1116; border: none;
+    border-radius: 4px; font-weight: bold;
 }

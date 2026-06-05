@@ -10,11 +10,14 @@ filterButtons.forEach((button) => {
     button.classList.add("active");
 
     gameCards.forEach((card) => {
-      const platformText = card.dataset.platforms || card.textContent.toLowerCase();
+      const platformText =
+        card.dataset.platforms || card.textContent.toLowerCase();
       const platforms = platformText.split(/\s+/);
+      let isPc = selectedFilter === "komputer" && platforms.includes("PC");
       const shouldShow =
         selectedFilter === "all" ||
         selectedFilter === "semua" ||
+        isPc ||
         platforms.includes(selectedFilter) ||
         platformText.includes(selectedFilter);
 
@@ -22,3 +25,4 @@ filterButtons.forEach((button) => {
     });
   });
 });
+
