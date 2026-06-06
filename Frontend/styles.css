@@ -1750,3 +1750,19 @@ p,
     grid-template-columns: 1fr;
   }
 }
+
+@media screen and (max-width: 768px) {
+  .inner-page,
+  .content-grid,
+  .content-panel {
+    padding-top: 1rem !important;
+    padding-bottom: 1rem !important;
+  }
+
+  .page-hero {
+    min-height: auto !important;
+    padding: 2rem 0 !important;
+  }
+}
+
+

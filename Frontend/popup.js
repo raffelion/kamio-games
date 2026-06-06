@@ -13,3 +13,4 @@ function showComingSoon(platform) {
   `;
   document.body.appendChild(overlay);
 }
+
