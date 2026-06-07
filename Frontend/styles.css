@@ -46,27 +46,23 @@ a {
 }
 
 .site-header {
-  position: sticky;
-  top: 0;
-  z-index: 10;
-  display: grid;
-  grid-template-columns: auto 1fr auto;
-  align-items: center;
-  gap: 2rem;
-  min-height: 4.5rem;
-  padding: 0 2.25rem;
-  background: rgba(12, 15, 20, 0.92);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-  backdrop-filter: blur(16px);
+    display: flex;
+    align-items: center;
+    gap: 2.5rem;
+    padding: 0 2rem;
+    height: 4.5rem;
+    background: rgba(14, 17, 22, 0.95);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    position: sticky;
+    top: 0;
+    z-index: 100;
 }
 
-.brand,
-.footer-brand {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.7rem;
-  font-weight: 800;
-  letter-spacing: 0;
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+    font-weight: 800;
 }
 
 .brand-mark {
@@ -90,12 +86,20 @@ a {
 }
 
 .main-nav {
-  justify-content: center;
+    display: flex;
+    gap: 2rem;
+    margin-right: auto;
+}
+
+.main-nav a {
+    color: var(--muted);
+    font-size: 0.9rem;
+    transition: color 0.2s;
 }
 
 .main-nav a:hover,
 .site-footer a:hover {
-  color: var(--text);
+  color: #fff;
 }
 
 .header-cta,
@@ -890,9 +894,9 @@ dd,
 }
 
 .header-right-actions {
-  display: flex;
-  align-items: center;
-  gap: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
 }
 
 .header-login {
