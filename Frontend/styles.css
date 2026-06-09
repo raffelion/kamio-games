@@ -25,7 +25,7 @@ body {
   margin: 0;
   background:
     linear-gradient(180deg, rgba(14, 17, 22, 0.86), #0e1116 34rem),
-    url("../Asset/main-menu.jpeg");
+    url("Asset/main-menu.jpeg");
   background-attachment: fixed;
   background-position: center top;
   background-size: cover;
@@ -552,7 +552,7 @@ dd,
 .download-page {
   background:
     linear-gradient(180deg, rgba(14, 17, 22, 0.35), rgba(14, 17, 22, 0.96)),
-    url("../Asset/main-menu.jpeg");
+    url("Asset/main-menu.jpeg");
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
@@ -718,7 +718,7 @@ dd,
 .contact-body {
   background:
     linear-gradient(180deg, rgba(14, 17, 22, 0.85), rgba(14, 17, 22, 0.95)),
-    url("../Asset/main-menu.jpeg") center / cover fixed;
+    url("Asset/main-menu.jpeg") center / cover fixed;
   color: var(--text);
 }
 
@@ -932,7 +932,7 @@ dd,
       rgba(9, 12, 16, 0.95) 30%,
       rgba(9, 12, 16, 0.4) 100%
     ),
-    url("../Asset/main-menu.jpeg") no-repeat center top;
+    url("Asset/main-menu.jpeg") no-repeat center top;
   background-size: cover;
   overflow: hidden;
 }
@@ -1849,9 +1849,9 @@ p,
   width: min(80vw, 300px);
   height: 100vh;
   background: #0e1116;
-  padding: 4.5rem 1.5rem 2rem 1.5rem; /* Padding atas harus >= tinggi navbar */
   z-index: 9999;
   flex-direction: column;
+  padding: 1rem; /* Padding luar lebih kecil */
   transition: right 0.4s ease;
   box-shadow: -5px 0 15px rgba(0, 0, 0, 0.5);
 }
@@ -1870,18 +1870,32 @@ p,
 
 /* Memisahkan daftar menu dengan tombol aksi */
 .mobile-nav-links {
-  margin-top: 1rem;
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 1.5rem; /* Jarak antar menu lebih rapat */
+  margin-top: 2rem;
+  padding-left: 0.5rem;
+}
+
+.mobile-nav-links a {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: var(--text);
+  opacity: 0.9;
 }
 
 .mobile-auth-actions {
-  margin-top: auto; /* Mendorong ke bawah secara otomatis */
-  padding-bottom: 2rem;
+  margin-top: auto; /* Mendorong ke bawah */
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 0.75rem; /* Jarak antar tombol lebih rapat */
+  padding-bottom: 2rem;
+}
+.mobile-auth-actions a {
+  padding: 0.8rem;
+  text-align: center;
+  border-radius: 4px;
+  font-weight: 600;
 }
 
 .close-menu-btn {
@@ -1902,12 +1916,68 @@ p,
 
 /* Styling untuk elemen di dalam overlay */
 .mobile-nav-links {
-    display: flex; flex-direction: column; gap: 2rem;
-    padding: 1.5rem; margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem; /* Jarak antar menu lebih rapat */
+  margin-top: 2rem;
+  padding-left: 0.5rem;
 }
+.mobile-nav-links a {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: var(--text);
+  opacity: 0.9;
+}
+
 .mobile-auth-actions {
-    margin-top: auto; padding: 1.5rem;
-    display: flex; flex-direction: column; gap: 10px;
+  margin-top: auto; /* Mendorong ke bawah */
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem; /* Jarak antar tombol lebih rapat */
+  padding-bottom: 2rem;
 }
-.mobile-login-btn { padding: 12px; border: 1px solid #555; text-align: center; }
-.mobile-register-btn { padding: 12px; background: #35d4bd; color: black; text-align: center; font-weight: bold; }
+.mobile-auth-actions a {
+  padding: 0.8rem;
+  text-align: center;
+  border-radius: 4px;
+  font-weight: 600;
+}
+.mobile-login-btn {
+  padding: 12px;
+  border: 1px solid #555;
+  text-align: center;
+}
+.mobile-register-btn {
+  padding: 12px;
+  background: #35d4bd;
+  color: black;
+  text-align: center;
+  font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  /* Hilangkan margin bawaan agar tidak ada celah kosong */
+  .footer-top-nexon,
+  .footer-links-nexon,
+  .footer-bottom-nexon,
+  .footer-bottom-nexon p {
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  /* Rapatkan kontainer utama footer */
+  .footer-top-nexon {
+    padding-bottom: 0.5rem !important;
+  }
+
+  /* Rapatkan link footer */
+  .footer-links-nexon {
+    gap: 0.2rem 1rem !important; /* Jarak vertikal diperkecil jadi 0.2rem */
+    line-height: 1.2; /* Mengatur tinggi baris teks */
+  }
+
+  /* Rapatkan teks copyright */
+  .footer-bottom-nexon {
+    padding-top: 0.5rem !important;
+  }
+}
